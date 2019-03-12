@@ -37,8 +37,8 @@ class TwitterTimelineMixin(object):
         # Set up twitter app in config.py and uncomment the following line.
         # timeline = json.dumps(self.twitter_timeline())
         if sys.version_info < (3, 0):
-            data = bytes(timeline)
+            timeline = bytes(timeline)
         else:
-            data = bytes(timeline, 'utf8')
+            timeline = bytes(timeline, 'utf8')
         self.wfile.write(timeline)
         return
