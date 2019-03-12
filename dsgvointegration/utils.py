@@ -34,7 +34,6 @@ class TwitterTimelineMixin(object):
         self.send_header('Content-type', 'application/json')
         self.end_headers()
         timeline = json.dumps(TWITTER_EXAMPLE)
-        timeline = bytes(timeline)
         # Set up twitter app in config.py and uncomment the following line.
         # timeline = json.dumps(self.twitter_timeline())
         if sys.version_info < (3, 0):
