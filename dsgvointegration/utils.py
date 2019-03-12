@@ -54,4 +54,4 @@ class TwitterTimelineMixin(object):
         # Make your settings above and uncomment the following line. 
         # timeline = json.dumps(self.twitter_timeline())
         self.wfile.write(timeline)
-        return  
+        return
