@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Twitter Timeline</title>
+</head>
+<body>
+	<h1>
+		DSGVO-konforme Twitter-Timeline
+	</h1>
+	<div>
+		<div id="tweetlisting">	
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>	
+		$(function() {
+			var displayResources = $("#tweetlisting");
+			displayResources.text("...");
+			$.ajax({
+				url:"http://localhost:8010/timeline.json",
+				dataType:'JSON',
+				type:'GET',
+				success:function(result) {
+			        var output = '';
+			        for (var i in result) {
+			          output +=
+			        	  	'<div style="padding-bottom:20px">' +
+				        	  		'<strong>' + result[i].name + '</strong><br />' +
+				        	  			'<a target="_blank" href="https://twitter.com/' + result[i].screen_name + '">' + '@' + result[i].screen_name + '</a><br />' +
+					        	  	'<a target="_blank" class="list-group-item" style="border-top:none; border-bottom:none" ' + 'href="https://twitter.com/' + result[i].screen_name + '/status/' + result[i].id_str + '">' +
+					        	  		result[i].text +
+					        	  	'</a>' +
+			        	  	'</div>';
+			        }
+			        output += '';			
+			        displayResources.html(output);
+				}
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>DSGVO-konforme Zwei-Klick-Lösung</h3>
+
+	<div id="slidearea_id0">
+		<div style="padding: 20px; border: 1px solid #ddd; color: grey"
+			id="slides_id0">
+			<div>
+				<p>Hier finden Sie die Präsentation. Zur Bereitstellung der
+					Präsentation setzen wir den Dienst Slideshare ein. Dieser ist
+					mittels einer 2-Klick-Lösung eingebunden. Das heißt, wenn Sie diese
+					Seite besuchen, werden keine personenbezogenen Daten weitergegeben.
+					Nur wenn Sie hier auf "Präsentation anzeigen" klicken, können
+					personenbezogene Daten übermittelt werden. Näheres erfahren Sie in
+					der Datenschutzerklärung.</p>
+				<button id="slides_button_id0">Päsentation anzeigen</button>
+			</div>
+		</div>
+	</div>
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		jQuery('#slides_button_id0')
+				.click(
+						function() {
+							jQuery('#slides_id0').remove();
+							jQuery('#slidearea_id0')
+									.append(
+											'<iframe src="//www.slideshare.net/slideshow/embed_code/key/ssU3QXo2nxXfDK" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%" mozallowfullscreen="mozallowfullscreen" height="456" width="760" allowfullscreen="allowfullscreen" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" webkitallowfullscreen="webkitallowfullscreen"></iframe>');
+						});
+	</script>
+
+</body>
+</html>
