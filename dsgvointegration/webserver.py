@@ -18,7 +18,6 @@ class myHandler(BaseHTTPRequestHandler, TwitterTimelineMixin):
             sendReply = False
             if self.path.endswith(".html"):
                 self.path = '/templates' + self.path  # switch to templates
-                print self.path
                 mimetype = 'text/html'
                 sendReply = True
             if sendReply is True:
@@ -37,11 +36,12 @@ class myHandler(BaseHTTPRequestHandler, TwitterTimelineMixin):
 def runner():
     try:
         server = HTTPServer(('', PORT_NUMBER), myHandler)
-        print 'Webserver wird gestartet auf Port ', PORT_NUMBER
+        stinfo = 'Webserver wird gestartet auf Port {}'.format(PORT_NUMBER)
+        print (stinfo)
         server.serve_forever()
 
     except KeyboardInterrupt:
-        print '...Webserver wird heruntergefahren'
+        print ('...Webserver wird heruntergefahren')
         server.socket.close()
 
 
