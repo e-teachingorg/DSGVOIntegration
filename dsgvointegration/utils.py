@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 
+import sys
 import tweepy
 import json
-from config import (CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN,
-                    ACCESS_TOKEN_SECRET, TWITTER_EXAMPLE)
+from dsgvointegration.config import (CONSUMER_KEY, CONSUMER_SECRET,
+                                     ACCESS_TOKEN, ACCESS_TOKEN_SECRET,
+                                     TWITTER_EXAMPLE)
 
 
 class TwitterTimelineMixin(object):
@@ -32,7 +34,12 @@ class TwitterTimelineMixin(object):
         self.send_header('Content-type', 'application/json')
         self.end_headers()
         timeline = json.dumps(TWITTER_EXAMPLE)
+        timeline = bytes(timeline)
         # Set up twitter app in config.py and uncomment the following line.
         # timeline = json.dumps(self.twitter_timeline())
+        if sys.version_info < (3, 0):
+            data = bytes(timeline)
+        else:
+            data = bytes(timeline, 'utf8')
         self.wfile.write(timeline)
         return

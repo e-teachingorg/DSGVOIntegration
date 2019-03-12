@@ -1,9 +1,15 @@
 # -*- coding: utf-8 -*-
 
-from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
+import sys
 from os import curdir, sep
-from utils import TwitterTimelineMixin
-from config import PORT_NUMBER
+
+from dsgvointegration.utils import TwitterTimelineMixin
+from dsgvointegration.config import PORT_NUMBER
+
+if sys.version_info < (3, 0):
+    from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
+else:
+    from http.server import BaseHTTPRequestHandler, HTTPServer
 
 
 class myHandler(BaseHTTPRequestHandler, TwitterTimelineMixin):
@@ -21,7 +27,7 @@ class myHandler(BaseHTTPRequestHandler, TwitterTimelineMixin):
                 mimetype = 'text/html'
                 sendReply = True
             if sendReply is True:
-                f = open(curdir + sep + self.path)
+                f = open(curdir + sep + self.path, 'rb')
                 self.send_response(200)
                 self.send_header('Content-type', mimetype)
                 self.end_headers()
