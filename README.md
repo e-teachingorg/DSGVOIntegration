@@ -56,9 +56,43 @@ installiert ist und geben folgendes ein:
 C:\Python27>python.exe -m pip install tweepy
 ```
 
-3. Aschließend laden Sie DSGVOIntegration von
+3. Anschließend laden Sie DSGVOIntegration von
 https://github.com/e-teachingorg/DSGVOIntegration herunter (Clone or download,
 Download ZIP), enpacken die ZIP-Datei, öffnen den Ordner **SGVOIntegration**
 
 4. Mit einem Klick auf start.py sollte sich ein Fenster öffnen in dem folgendes
 steht: Webserver wird gestartet auf Port 8010
+
+# Start
+
+Ein einfacher Webserver läuft nun auf Port 8010. Öffnen Sie einen Browser und
+geben Sie folgende URL ein:
+
+```
+http://localhost:8010/
+```
+
+Sie sollte eine Twittertimeline mit Beispieldaten sehen
+
+
+# Konfiguration
+
+Im Odner **dsgvointegration** finden Sie die Datei **config.py**.
+
+
+## config.py
+
+Wenn Sie beireits eine Twitter-App angemeldet haben, können Sie die
+entspechenden Daten (CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN,
+ACCESS_TOKEN_SECRET) dort eingeben. Ansonsten müssen sie sich erst die
+entspechenden Keys erstellen. Mehr auf https://developer.twitter.com/en/apps
+
+Wenn Sie ihre Keys eingetragen haben, setzen Sie den Wert **REAL_TIMELINE**
+auf **True** und starten die Anwendung erneut
+
+```
+REAL_TIMELINE = True
+```
+
+Außerdem können Sie in duieser Datei die PORT_NUMMER für den Webserver anpassen
+ 

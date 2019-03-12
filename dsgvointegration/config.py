@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Set up webserver
+# Set up webserver port
 PORT_NUMBER = 8010
 
 # Set up you twitter app
@@ -9,7 +9,10 @@ CONSUMER_SECRET = 'XXXXXX'
 ACCESS_TOKEN = 'XXXXXX'
 ACCESS_TOKEN_SECRET = 'XXXXXX'
 
-# Twitter timeline example dict
+# Switch to True, if your keys are ready
+REAL_TIMELINE = False
+
+# Twitter timeline example
 TWITTER_EXAMPLE = [
     {
         'id_str': '22222222',

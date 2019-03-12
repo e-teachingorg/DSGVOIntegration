@@ -5,7 +5,7 @@ import tweepy
 import json
 from dsgvointegration.config import (CONSUMER_KEY, CONSUMER_SECRET,
                                      ACCESS_TOKEN, ACCESS_TOKEN_SECRET,
-                                     TWITTER_EXAMPLE)
+                                     TWITTER_EXAMPLE, REAL_TIMELINE)
 
 
 class TwitterTimelineMixin(object):
@@ -33,12 +33,16 @@ class TwitterTimelineMixin(object):
         self.send_response(200)
         self.send_header('Content-type', 'application/json')
         self.end_headers()
-        timeline = json.dumps(TWITTER_EXAMPLE)
-        # Set up twitter app in config.py and uncomment the following line.
-        # timeline = json.dumps(self.twitter_timeline())
+
+        if REAL_TIMELINE:
+            timeline = json.dumps(self.twitter_timeline())
+        else:
+            timeline = json.dumps(TWITTER_EXAMPLE)
+
         if sys.version_info < (3, 0):
             timeline = bytes(timeline)
         else:
             timeline = bytes(timeline, 'utf8')
         self.wfile.write(timeline)
+
         return
