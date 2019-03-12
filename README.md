@@ -13,8 +13,9 @@ Integration.
 Alle HTML-Dateien im Ordner Templates können einfach eingesehen werden.
 **no-embed.html** und **two-click-embed.html** sind direkt im Browser
 lauffähig. Es ist keine weitere Installation erforderlich. Für das Beispiel
-in **api-embed.html** wird für den hier vorliegenden Demonstrator **Python**
-und das Python-Modul **tweepy** benötigt.
+in **api-embed.html** werden für den hier vorliegenden Demonstrator **Python**,
+das Python-Modul **tweepy**, ein Twitter-Account und Keys für eine Twitter-App
+benötigt.
 
 
 ## Ubuntu Linux
@@ -77,7 +78,7 @@ Sie sollte eine Twittertimeline mit Beispieldaten sehen
 
 # Konfiguration
 
-Im Odner **dsgvointegration** finden Sie die Datei **config.py**.
+Im Ordner **dsgvointegration** finden Sie die Datei **config.py**.
 
 
 ## config.py
@@ -88,11 +89,12 @@ ACCESS_TOKEN_SECRET) dort eingeben. Ansonsten müssen sie sich erst die
 entspechenden Keys erstellen. Mehr auf https://developer.twitter.com/en/apps
 
 Wenn Sie ihre Keys eingetragen haben, setzen Sie den Wert **REAL_TIMELINE**
-auf **True** und starten die Anwendung erneut
+auf **True** und starten die Anwendung erneut. Nun sollten die Tweets Ihrer
+Timeline zu sehen sein.
 
 ```
 REAL_TIMELINE = True
 ```
 
-Außerdem können Sie in duieser Datei die PORT_NUMMER für den Webserver anpassen
+Außerdem können Sie in dieser Datei die PORT_NUMMER für den Webserver anpassen
  
