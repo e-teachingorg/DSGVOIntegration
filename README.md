@@ -50,10 +50,11 @@ Webserver wird gestartet auf Port 10080
 installiert werden. Achten Sie darauf, bei der Installation
 **Add Python to PATH** auszuwählen, damit Python später von einem beliebigen
 Ort ausgeführt werden kann.
+
 2. Im zweiten Schritt erfolgt die Installation des Python-Moduls **tweepy**.
 Dazu öffen Sie die Eingabeaufforderung (und falls Python nicht im PATH verfügbar
-ist, bewegen sich in den Ordner, wo Python installiert ist) und geben folgendes
-ein:
+ist, bewegen sich in den Ordner, wo Python installiert ist), geben folgendes
+ein und drücken Enter:
 
 
 ```
