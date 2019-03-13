@@ -47,10 +47,13 @@ Webserver wird gestartet auf Port 8010
 ## Windows
 
 1. Falls nicht vorhanden, muß Python 2 oder 3 (https://www.python.org)
-installiert werden
+installiert werden. Achten Sie darauf, bei der Installation
+**Add Python to PATH** auszuwählen, damit Python später von einem beliebigen
+Ort ausgeführt werden kann.
 2. Im zweiten Schritt erfolgt die Installation des Python-Moduls **tweepy**.
-Dazu öffen Sie die Eingabeaufforderung, bewegen sich in den Ordner, wo Python
-installiert ist und geben folgendes ein:
+Dazu öffen Sie die Eingabeaufforderung (und falls Python nicht im PATH verfügbar
+ist, bewegen sich in den Ordner, wo Python installiert ist) und geben folgendes
+ein:
 
 
 ```
@@ -58,8 +61,9 @@ C:\Python27>python.exe -m pip install tweepy
 ```
 
 3. Anschließend laden Sie DSGVOIntegration von
-https://github.com/e-teachingorg/DSGVOIntegration herunter (Clone or download,
-Download ZIP), enpacken die ZIP-Datei, öffnen den Ordner **SGVOIntegration**
+[der Projektseite](https://github.com/e-teachingorg/DSGVOIntegration)
+herunter (Clone or download, Download ZIP), enpacken die ZIP-Datei, öffnen den
+Ordner **SGVOIntegration**
 
 4. Mit einem Klick auf start.py sollte sich ein Fenster öffnen in dem folgendes
 steht: Webserver wird gestartet auf Port 8010
@@ -73,8 +77,13 @@ geben Sie folgende URL ein:
 http://localhost:8010/
 ```
 
-Sie sollte eine Twittertimeline mit Beispieldaten sehen
+Sie sollte eine Twittertimeline mit Beispieldaten sehen. Weitere Beispiele finden
+Sie über folgende Adressen
 
+```
+http://localhost:8010/two-click-embed.html
+http://localhost:8010/no-embed.html
+```
 
 # Konfiguration
 
@@ -97,4 +106,3 @@ REAL_TIMELINE = True
 ```
 
 Außerdem können Sie in dieser Datei die PORT_NUMMER für den Webserver anpassen
- 
