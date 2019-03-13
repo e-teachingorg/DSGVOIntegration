@@ -41,7 +41,7 @@ Folgendes sollte zu sehen sein
 
 ```
 ./start
-Webserver wird gestartet auf Port 8010
+Webserver wird gestartet auf Port 10080
 ```
 
 ## Windows
@@ -66,23 +66,23 @@ herunter (Clone or download, Download ZIP), enpacken die ZIP-Datei, öffnen den
 Ordner **SGVOIntegration**
 
 4. Mit einem Klick auf start.py sollte sich ein Fenster öffnen in dem folgendes
-steht: Webserver wird gestartet auf Port 8010
+steht: Webserver wird gestartet auf Port 10080
 
 # Start
 
-Ein einfacher Webserver läuft nun auf Port 8010. Öffnen Sie einen Browser und
+Ein einfacher Webserver läuft nun auf Port 10080. Öffnen Sie einen Browser und
 geben Sie folgende URL ein:
 
 ```
-http://localhost:8010/
+http://localhost:10080/
 ```
 
 Sie sollte eine Twittertimeline mit Beispieldaten sehen. Weitere Beispiele finden
 Sie über folgende Adressen
 
 ```
-http://localhost:8010/two-click-embed.html
-http://localhost:8010/no-embed.html
+http://localhost:10080/two-click-embed.html
+http://localhost:10080/no-embed.html
 ```
 
 # Konfiguration

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # Set up webserver port
-PORT_NUMBER = 8010
+PORT_NUMBER = 10080
 
 # Set up you twitter app
 CONSUMER_KEY = 'XXXXX'
