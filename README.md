@@ -87,22 +87,33 @@ http://localhost:8010/no-embed.html
 
 # Konfiguration
 
+Das Beispiel mit der Twitter-Timeline basiert auf der Nutzung von Daten direkt
+von der Twitter-API. Auf diese Weise ist es möglich, eine Timeline auf einer
+Website einzubinden, ohne das Widget von Twitter zu nutzen und damit auch keine
+ungewollten Traker zu installieren. Um die API nutzen zu können, benötigen Sie
+einen Account bei Twitter und müssen im
+[Developper-Bereich bei Twitter](https://developer.twitter.com/en/apps) eine App
+registrieren. Die dabei erhaltenen Keys werden in die Datei config.py eingetragen.
+
 Im Ordner **dsgvointegration** finden Sie die Datei **config.py**.
 
 
 ## config.py
 
-Wenn Sie beireits eine Twitter-App angemeldet haben, können Sie die
+Wenn Sie bereits eine Twitter-App angemeldet haben, können Sie die
 entspechenden Daten (CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN,
 ACCESS_TOKEN_SECRET) dort eingeben. Ansonsten müssen sie sich erst die
-entspechenden Keys erstellen. Mehr auf https://developer.twitter.com/en/apps
+entspechenden Keys erstellen.
 
-Wenn Sie ihre Keys eingetragen haben, setzen Sie den Wert **REAL_TIMELINE**
+Wenn Sie Ihre Keys eingetragen haben, setzen Sie den Wert **REAL_TIMELINE**
 auf **True** und starten die Anwendung erneut. Nun sollten die Tweets Ihrer
-Timeline zu sehen sein.
+Timeline zu sehen sein. Achtung: Die Anzahl der Anfragen an die API ist
+begrenzt! Falls Sie planen, dass Szenario in einem Produktivbetrieb einzusetzen,
+müssen Sie die Ergebnisse der Anfragen zwischenspeichern und die Abfragen auf eine
+Abfrage alle 15 Minuten begrenzen.
 
 ```
 REAL_TIMELINE = True
 ```
 
-Außerdem können Sie in dieser Datei die PORT_NUMMER für den Webserver anpassen
+Außerdem können Sie in der config.py die PORT_NUMMER für den Webserver anpassen
