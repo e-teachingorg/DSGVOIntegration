@@ -23,9 +23,9 @@ DSGVOIntegration zeigt drei unterschiedlich komplexe Ansätze, bei denen keine
 Daten an die Betreiber sozialer Netzwerke übertragen werden. Die Datei
 **no-embed.html** zeigt ein Beispiel einer einfachen Verlinkung. In 
 **two-click-embed.html** finden Sie die sogenannte Zwei-Klick-Lösung.
-**api-embed.html** ist die komplexeste aber auch eleganteste Lösung zur
-Anzeige von Social-Media-Inhalten. Dabei werden die Daten serverseitig über
-eine API abgefragt und dann auf der Website eingebunden. Das Beipiel wurde
+In **api-embed.html** wird die komplexeste aber auch eleganteste Lösung zur
+Anzeige von Social-Media-Inhalten gezeigt. Dabei werden die Daten serverseitig
+über eine API abgefragt und dann auf der Website eingebunden. Das Beipiel wurde
 mithilfe von Python realisiert. Denkbar ist aber auch die Verwendung anderer
 Sprachen, wie beispielsweise PHP.
 

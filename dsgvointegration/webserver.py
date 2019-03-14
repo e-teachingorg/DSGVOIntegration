@@ -4,7 +4,7 @@ import sys
 from os import curdir, sep
 
 from dsgvointegration.utils import TwitterTimelineMixin
-from dsgvointegration.config import PORT_NUMBER
+from dsgvointegration.config import (PORT_NUMBER, TEMPLATE_FOLDER)
 
 if sys.version_info < (3, 0):
     from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
@@ -23,11 +23,12 @@ class myHandler(BaseHTTPRequestHandler, TwitterTimelineMixin):
         try:
             sendReply = False
             if self.path.endswith(".html"):
-                self.path = '/templates' + self.path  # switch to templates
+                self.path = '/{}{}'.format(TEMPLATE_FOLDER, self.path)
                 mimetype = 'text/html'
                 sendReply = True
             if sendReply is True:
-                f = open(curdir + sep + self.path, 'rb')
+                fpath = '{}{}{}'.format(curdir, sep, self.path)
+                f = open(fpath, 'rb')
                 self.send_response(200)
                 self.send_header('Content-type', mimetype)
                 self.end_headers()
@@ -36,7 +37,7 @@ class myHandler(BaseHTTPRequestHandler, TwitterTimelineMixin):
             return
 
         except IOError:
-            self.send_error(404, 'File Not Found: %s' % self.path)
+            self.send_error(404, 'File Not Found: {}'.format(self.path))
 
 
 def runner():

@@ -12,6 +12,9 @@ ACCESS_TOKEN_SECRET = 'XXXXXX'
 # Switch to True, if your keys are ready
 REAL_TIMELINE = False
 
+# Define template folder
+TEMPLATE_FOLDER = 'templates'
+
 # Twitter timeline example
 TWITTER_EXAMPLE = [
     {
