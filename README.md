@@ -116,7 +116,7 @@ http://localhost:10080/no-embed.html
 Das Beispiel mit der Twitter-Timeline basiert auf der Nutzung von Daten direkt
 von der Twitter-API. Auf diese Weise ist es möglich, eine Timeline auf einer
 Website einzubinden, ohne das Widget von Twitter zu nutzen und damit auch keine
-ungewollten Traker zu installieren. Um die API nutzen zu können, benötigen Sie
+ungewollten Tracker zu installieren. Um die API nutzen zu können, benötigen Sie
 einen Account bei Twitter und müssen im
 [Developper-Bereich bei Twitter](https://developer.twitter.com/en/apps) eine App
 registrieren. Die dabei erhaltenen Keys werden in die Datei config.py eingetragen.
