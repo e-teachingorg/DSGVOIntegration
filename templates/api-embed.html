@@ -18,7 +18,7 @@
 			var displayResources = $("#tweetlisting");
 			displayResources.text("...");
 			$.ajax({
-				url:"http://localhost:8010/timeline.json",
+				url:"http://localhost:10080/timeline.json",
 				dataType:'JSON',
 				type:'GET',
 				success:function(result) {
