@@ -91,7 +91,7 @@ C:\Python27>python.exe -m pip install tweepy
 herunter (Clone or download, Download ZIP), enpacken die ZIP-Datei, öffnen den
 Ordner **SGVOIntegration**
 
-4. Mit einem Klick auf start.py sollte sich ein Fenster öffnen in dem folgendes
+4. Mit einem Klick auf **start.py** sollte sich ein Fenster öffnen in dem folgendes
 steht: Webserver wird gestartet auf Port 10080
 
 # Start
@@ -103,7 +103,7 @@ geben Sie folgende URL ein:
 http://localhost:10080/
 ```
 
-Sie sollte eine Twittertimeline mit Beispieldaten sehen. Weitere Beispiele finden
+Sie sollte eine Twitter-Timeline mit Beispieldaten sehen. Weitere Beispiele finden
 Sie über folgende Adressen
 
 ```
@@ -119,7 +119,8 @@ Website einzubinden, ohne das Widget von Twitter zu nutzen und damit auch keine
 ungewollten Tracker zu installieren. Um die API nutzen zu können, benötigen Sie
 einen Account bei Twitter und müssen im
 [Developper-Bereich bei Twitter](https://developer.twitter.com/en/apps) eine App
-registrieren. Die dabei erhaltenen Keys werden in die Datei config.py eingetragen.
+registrieren. Die dabei erhaltenen Keys werden in die Datei **config.py**
+eingetragen.
 
 Im Ordner **dsgvointegration** finden Sie die Datei **config.py**.
 
@@ -131,12 +132,19 @@ entspechenden Daten (CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN,
 ACCESS_TOKEN_SECRET) dort eingeben. Ansonsten müssen sie sich erst die
 entspechenden Keys erstellen.
 
+```
+CONSUMER_KEY = 'Enter your consumer key'
+CONSUMER_SECRET = 'Enter your consumer secret'
+ACCESS_TOKEN = 'Enter your consumer access token'
+ACCESS_TOKEN_SECRET = 'Enter your access token secret'
+```
+
 Wenn Sie Ihre Keys eingetragen haben, setzen Sie den Wert **REAL_TIMELINE**
 auf **True** und starten die Anwendung erneut. Nun sollten die Tweets Ihrer
 Timeline zu sehen sein. Achtung: Die Anzahl der Anfragen an die API ist
 begrenzt! Falls Sie planen, dass Szenario in einem Produktivbetrieb einzusetzen,
-müssen Sie die Ergebnisse der Anfragen zwischenspeichern und die Abfragen auf eine
-Abfrage alle 15 Minuten begrenzen.
+müssen Sie die Ergebnisse der Anfragen zwischenspeichern (cachen) und die
+Abfragen auf eine Abfrage alle 15 Minuten begrenzen. 
 
 ```
 REAL_TIMELINE = True
