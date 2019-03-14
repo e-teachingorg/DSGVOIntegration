@@ -1,12 +1,37 @@
 # DSGVOIntegration
 
-
 DSGVOIntegration ist ein einfacher Demonstrator für verschiedene Ansätze der
-DSVO-konformen Intregration von Social-Media-Widgets in Websites.
+DSVO-konformen Intregration von Social-Media-Bereichen in Websieten
+(Social-Media-Widgets).
 
-In den Dateien **no-embed.html**, **und two-click-embed.html** und
-**api-embed.html** im Ordner **templates** finden sich Beispiele für eine
-Integration. 
+## Hintergrund
+
+Für die Social-Media-Integration in Webseiten, z.B. in der Form von 
+Teilen(Share)-Buttons oder dem Anzeigen einer Twitter-Timeline,
+werden von den Betreibern sozialer Netzwerke Standard-Plug-ins zur
+Verfügung gestellt. Das Problem: Bereits beim Besuch einer mit derartigen
+Plug-ins ausgestatteten Webseite, werden Daten an die Betreiber der
+entsprechenden sozialen Netzwerke übertragen - auch wenn die Webseitenbesucher
+dort gar kein Konto haben, bzw. die Funktion gar nicht nutzen möchten. Dieses
+sogenannte Tracking passiert oft unbewusst, ist meist unerwünscht und dazu
+noch aus datenschutzrechtlicher Sicht hochproblematisch, da die Nutzenden
+dafür oft keine Zustimmung erteilt haben.
+
+## Umsetzungsbeispiele
+
+DSGVOIntegration zeigt drei unterschiedlich komplexe Ansätze, bei denen keine
+Daten an die Betreiber sozialer Netzwerke übertragen werden. Die Datei
+**no-embed.html** zeigt ein Beispiel einer einfachen Verlinkung. In 
+**two-click-embed.html** finden Sie die sogenannte Zwei-Klick-Lösung.
+**api-embed.html** ist die komplexeste aber auch eleganteste Lösung zur
+Anzeige von Social-Media-Inhalten. Dabei werden die Daten serverseitig über
+eine API abgefragt und dann auf der Website eingebunden. Das Beipiel wurde
+mithilfe von Python realisiert. Denkbar ist aber auch die Verwendung anderer
+Sprachen, wie beispielsweise PHP.
+
+Die Dateien **no-embed.html**, **und two-click-embed.html** und
+**api-embed.html** befinden sich im Ordner **templates**.    
+
 
 # Installation
 
@@ -46,13 +71,13 @@ Webserver wird gestartet auf Port 10080
 
 ## Windows
 
-1. Falls nicht vorhanden, muß Python 2 oder 3 (https://www.python.org)
+1. Falls nicht vorhanden, muss Python 2 oder 3 (https://www.python.org)
 installiert werden. Achten Sie darauf, bei der Installation
 **Add Python to PATH** auszuwählen, damit Python später von einem beliebigen
 Ort ausgeführt werden kann.
 
 2. Im zweiten Schritt erfolgt die Installation des Python-Moduls **tweepy**.
-Dazu öffen Sie die Eingabeaufforderung (und falls Python nicht im PATH verfügbar
+Dazu öffnen Sie die Eingabeaufforderung (und falls Python nicht im PATH verfügbar
 ist, bewegen sich in den Ordner, wo Python installiert ist), geben folgendes
 ein und drücken Enter:
 
