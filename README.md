@@ -1,8 +1,8 @@
 # DSGVOIntegration
 
 DSGVOIntegration ist ein einfacher Demonstrator für verschiedene Ansätze der
-DSVO-konformen Intregration von Social-Media-Bereichen in Websieten
-(Social-Media-Widgets).
+DSVO-konformen Intregration von Social-Media-Bereichen (Social-Media-Widgets)
+in Webseiten.
 
 ## Hintergrund
 
